@@ -1,6 +1,7 @@
 # WeatherApp
 
-### Project introduction and proposal
+## Project introduction and proposal
+
 **Project Goals**
 
 This project aims to develop an internal weather application for company employees. It will provide accurate and timely weather information for various locations, enhancing employee operational efficiency and reducing third party dependencies. Furthermore, this project will foster a culture of innovation and learning within the development team to evaluate current processes and assess areas improvements. 
@@ -13,7 +14,7 @@ The app will initially utilise the open-meteo.com weather API and geocoding API 
 
 As I aim to have an iterative approach to adding features to the app, I will be using an agile development methodology. This approach allows for continuous improvement and adaptation based on user feedback and evolving needs. I used the Scrum framework, working in sprints to develop this app which was …. 
 
-### Project requirement
+## Project requirement
 
 1. User Interface
 - [ ] Search bar for user to input location by city/town
@@ -32,3 +33,18 @@ As I aim to have an iterative approach to adding features to the app, I will be 
 
 4. Validation
 - [ ] Ensure valid city names have been input in search bar
+
+**MoSCoW Prioritisation**
+
+Having outlined the requirements above, I prioritised them using the MoSCoW method. This well-established agile framework categorises requirements into four levels:
+* Must Have: Essential for the project's success.
+* Should Have: Highly desirable and increase the project's value.
+* Could Have: Enhance the project but are not critical.
+* Won't Have: Not included in the current scope but may be considered in future iterations.
+
+| Must Have | Should Have | Could Have | Won't Have |
+|---|---|---|---|
+| User input box | Location validation | Error message displayed for Network error and invalid city | Other weather info |
+| API for locations and temperature | Icon display for weather  |  | Weather alerts  |
+| Location, temp displayed |  |  | Mobile app development |
+| 3/4 hour forecast | | | Visualisations (Charts and graphs) | 
