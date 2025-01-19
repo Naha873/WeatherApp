@@ -13,3 +13,22 @@ The app will initially utilise the open-meteo.com weather API and geocoding API 
 
 As I aim to have an iterative approach to adding features to the app, I will be using an agile development methodology. This approach allows for continuous improvement and adaptation based on user feedback and evolving needs. I used the Scrum framework, working in sprints to develop this app which was …. 
 
+### Project requirement
+
+1. User Interface
+- [ ] Search bar for user to input location by city/town
+- [ ] Clear temperature display 
+- [ ] Button to switch between celsius and fahrenheit 
+- [ ] Date, time and selected location displayed 
+- [ ] 3/4 hours of hourly temperature forecast 
+
+2. Data
+- [ ] Live temperature data through API 
+- [ ] Live location options through API
+
+3. Error handling
+- [ ] If connection to API isn’t working, display error message
+- [ ] If invalid city name, display error message 
+
+4. Validation
+- [ ] Ensure valid city names have been input in search bar
