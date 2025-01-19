@@ -10,29 +10,25 @@ This project aims to develop an internal weather application for company employe
 
 The app will initially utilise the open-meteo.com weather API and geocoding API due to its free access. However, the project team should conduct a thorough evaluation of all API options in the long term. This evaluation should consider factors such as cost, data accuracy, feature set, and API limits to determine the most suitable solution for the project budget and requirements.
 
-**Agile Development Methodology**
-
-As I aim to have an iterative approach to adding features to the app, I will be using an agile development methodology. This approach allows for continuous improvement and adaptation based on user feedback and evolving needs. I used the Scrum framework, working in sprints to develop this app which was …. 
-
 ## Project requirement
 
 1. User Interface
-- [ ] Search bar for user to input location by city/town
-- [ ] Clear temperature display 
-- [ ] Button to switch between celsius and fahrenheit 
-- [ ] Date, time and selected location displayed 
-- [ ] 3/4 hours of hourly temperature forecast 
+- Search bar for user to input location by city/town
+- Clear temperature display 
+- Button to switch between celsius and fahrenheit 
+- Date, time and selected location displayed 
+- 3/4 hours of hourly temperature forecast 
 
 2. Data
-- [ ] Live temperature data through API 
-- [ ] Live location options through API
+- Live temperature data through API 
+- Live location options through API
 
 3. Error handling
-- [ ] If connection to API isn’t working, display error message
-- [ ] If invalid city name, display error message 
+- If connection to API isn’t working, display error message
+- If invalid city name, display error message 
 
 4. Validation
-- [ ] Ensure valid city names have been input in search bar
+- Ensure valid city names have been input in search bar
 
 **MoSCoW Prioritisation**
 
@@ -108,3 +104,24 @@ User stories are concise descriptions of features, told from the user's perspect
 - [ ] Weather conditions for each hour (e.g., sunny, cloudy, rainy).
 - [ ] The forecast data should be presented in a clear and concise manner.
 - [ ] The app should handle any errors in retrieving the forecast data.
+
+## Project Management 
+
+### **Agile Development Methodology**
+As I aim to have an iterative approach to adding features to the app, I will be using an agile development methodology. This approach allows for continuous improvement and adaptation based on user feedback and evolving needs. I will use the Scrum framework and work in sprints. [UPDATE WHEN COMPLETE] 
+
+### **Project management Tool - GitHub Projects**
+
+To effectively manage the project, I used a Kanban methodology using GitHub Projects. This visual workflow, with columns for 'Backlog,' 'Ready,' 'In Progress,' 'In Review,' and 'Done,' provided a dynamic overview of the project's status. By moving tasks across these columns, I could maintain a constant awareness of the project's workload, track progress, and ensure timely completion. I also linked these tasks to corresponding Git branches which means that there was seamless integration and clear traceability between project management and the code development. 
+
+### **Project Labels**
+
+To enhance clarity for future project contributors, I've implemented a labelling system for all tickets/issues. While some default GitHub labels are used, I've introduced custom labels for better readability.
+- **Priority Labels**: Instead of relying on potentially confusing Kanban board conventions, I've implemented clear labels: "Low," "Medium," and "High." This provides unambiguous prioritisation guidance.
+- **Time/Effort Labels**: To replace the less intuitive default GitHub labels (e.g., 's', 'xs'), I've introduced a 1-4 scale. '1' represents the least effort, while '4' signifies tasks requiring significant effort and potential breakdown into smaller sub-tasks.
+
+This labelling system improves overall project transparency. By easily identifying each issue's type (e.g., feature, documentation, bug), priority level, and estimated effort, contributors can quickly understand and effectively manage their workload.
+
+### **Ticket Template**
+
+To ensure consistency and clarity across all issues, I created ticket templates for features, bugs, and administrative tasks. These templates incorporate essential fields such as title, description, steps to reproduce (for bugs), acceptance criteria, and priority. This standardised format enhances issue clarity, enabling developers, testers, and stakeholders to quickly grasp the issue's context and requirements.
