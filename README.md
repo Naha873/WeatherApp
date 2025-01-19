@@ -48,3 +48,63 @@ Having outlined the requirements above, I prioritised them using the MoSCoW meth
 | API for locations and temperature | Icon display for weather  |  | Weather alerts  |
 | Location, temp displayed |  |  | Mobile app development |
 | 3/4 hour forecast | | | Visualisations (Charts and graphs) | 
+
+## Agile Story Cards
+User stories are concise descriptions of features, told from the user's perspective. By focusing on "who," "what," and "why," user stories clearly communicate what features are of high priority. They help those involved to best understand user needs and goals, leading to the development of the right features in the right way. Below, I have written 4 stories which establish a clear roadmap for development, ensuring the final product meets user expectations.
+
+### ***User Story 1: View Current Temperature***
+
+**As a** company employee,
+
+**I want to** be able to easily view the current temperature,
+
+**So that** I can plan my workday accordingly (e.g., dress appropriately, be prepared for outdoor tasks, decide if I need to bring a jacket).
+
+**Acceptance criteria:** 
+- [ ] The app shall display the current temperature for the default location (London) on initial load.
+- [ ] The app should have pictures that also depict the weather. 
+- [ ] App shall Display the current location (the default, when initially opened) , date and time. 
+- [ ] The temperature should be displayed in the default unit Celsius, with a user-friendly mechanism (e.g., a toggle button, a dropdown menu) to switch between Celsius and Fahrenheit.
+
+### ***User Story 2: Search and View Weather for Different Locations***
+
+**As a** company employee,
+
+**I want to** be able to search for and view weather information for different locations
+
+**So that** I can see the weather of the cities I am travelling to.
+
+**Acceptance criteria:** 
+- [ ] The app shall include a search bar for entering location names (e.g., city, country).
+- [ ] The search functionality should provide suggestions as the user types, aiding in location selection.
+- [ ] Current temperature in the selected location.
+- [ ] Current weather conditions (e.g., sunny, cloudy, rainy).
+- [ ] The app should handle invalid location searches or API errors.
+
+### ***User Story 3: Switch between temperature units - Celsius and Farenheit***
+
+**As a** company employee,
+
+**I want to** be able to switch between fahrenheit and celsius, 
+
+**So that** I can view the temperature in my preferred units.
+
+**Acceptance criteria:** 
+- [ ] The app must initially display the current temperature in Celsius.
+- [ ] A user-friendly mechanism (e.g., a toggle button, a dropdown menu) must be provided to switch between Celsius and Fahrenheit.
+- [ ] When the unit is switched, the displayed temperature must be dynamically updated to the selected unit.
+- [ ] The temperature conversion must be accurate (e.g., Celsius to Fahrenheit: (°C * 9/5) + 32).
+
+### ***User Story 4: View Short-Term Weather Forecast***
+
+**As a** company employee, 
+
+**I want to** see the temperature and weather for the next 3 or 4 hours, 
+
+**So that** I can plan for immediate weather changes that may impact my work.
+
+**Acceptance criteria:** 
+- [ ] Temperature readings for the next 3-4 hours at hourly intervals.
+- [ ] Weather conditions for each hour (e.g., sunny, cloudy, rainy).
+- [ ] The forecast data should be presented in a clear and concise manner.
+- [ ] The app should handle any errors in retrieving the forecast data.
