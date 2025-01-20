@@ -1,7 +1,7 @@
 async function getWeatherData(latitude, longitude) {
     try {
       const response = await fetch(
-        `https://api.open-meteo.com/v1/forecast?latitude=51.5085&longitude=-0.1257&current=temperature_2m,weather_code&timezone=auto`
+        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code&timezone=auto`
       );
   
       if (!response.ok) {
@@ -23,8 +23,7 @@ async function getWeatherData(latitude, longitude) {
   async function getDailyWeatherData(latitude, longitude) {
     try {
       const response = await fetch(
-        'https://api.open-meteo.com/v1/forecast?latitude=51.5085&longitude=-0.1257&daily=weather_code,temperature_2m_max&timezone=auto'
-      );
+        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=weather_code,temperature_2m_max&timezone=auto`      );
   
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -43,5 +42,29 @@ async function getWeatherData(latitude, longitude) {
     }
   }
 
- module.exports = {getWeatherData, getDailyWeatherData}; // Export the function directly
+  async function getLocation(location) {
+    try {
+      const response = await fetch(
+        `https://geocoding-api.open-meteo.com/v1/search?name=${location}&count=1&language=en&format=json` 
+      );
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+  
+      if (data.results.length === 0) {
+        throw new Error(`Location "${location}" not found.`);
+      }
+  
+      const { latitude, longitude } = data.results[0]; 
+      return { latitude, longitude }; 
+  
+    } catch (error) {
+      console.error('Error fetching location coordinates:', error);
+      throw error; 
+    }
+  }
+ module.exports = {getWeatherData, getDailyWeatherData, getLocation}; // Export the function directly
   

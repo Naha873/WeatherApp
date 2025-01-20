@@ -1,4 +1,4 @@
-const { getWeatherData, getHourlyWeatherData, getDailyWeatherData } = require('./index');
+const { getWeatherData, getDailyWeatherData, getLocation } = require('./index');
 
 test('fetches current temperature and weather code', async () => {
     const latitude = 51.5085; // Example latitude
@@ -20,4 +20,13 @@ test('fetches current temperature and weather code', async () => {
     expect(weatherData.weatherCode).toBeDefined();
     expect(weatherData.temperatureMax).toBeDefined(); // Assuming the property name is temperatureMax
   });
+
+  test('fetches latitude and longitude data', async () => {
+    const location = "Berlin"; 
+    const locationData = await getLocation(location);
+  
+    expect(locationData.latitude).toBeDefined();
+    expect(locationData.longitude).toBeDefined(); 
+  });
+  
 
