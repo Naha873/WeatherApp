@@ -73,6 +73,7 @@ async function getWeatherData(latitude, longitude) {
     }
     return (celsius * 9/5) + 32;
   }
+  
 /*
   function handleSwitchChange() {
     const switchInput = document.querySelector('input[type="checkbox"]');
