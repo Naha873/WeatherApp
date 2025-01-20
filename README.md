@@ -10,6 +10,10 @@ This project aims to develop an internal weather application for company employe
 
 The app will initially utilise the open-meteo.com weather API and geocoding API due to its free access. However, the project team should conduct a thorough evaluation of all API options in the long term. This evaluation should consider factors such as cost, data accuracy, feature set, and API limits to determine the most suitable solution for the project budget and requirements.
 
+**High level overview of project**
+
+![Image 19-01-2025 at 19 16](https://github.com/user-attachments/assets/01918fee-248b-4be3-ab36-7c9eac6efb34)
+
 ## Project requirement
 
 1. User Interface
@@ -112,9 +116,13 @@ As I aim to have an iterative approach to adding features to the app, I will be 
 
 ### **Project management Tool - GitHub Projects**
 
+![Image 20-01-2025 at 11 55](https://github.com/user-attachments/assets/aa1f1554-cbc4-41f0-80c5-5027e1465ede)
+
 To effectively manage the project, I used a Kanban methodology using GitHub Projects. This visual workflow, with columns for 'Backlog,' 'Ready,' 'In Progress,' 'In Review,' and 'Done,' provided a dynamic overview of the project's status. By moving tasks across these columns, I could maintain a constant awareness of the project's workload, track progress, and ensure timely completion. I also linked these tasks to corresponding Git branches which means that there was seamless integration and clear traceability between project management and the code development. 
 
 ### **Project Labels**
+
+![Image 19-01-2025 at 16 45](https://github.com/user-attachments/assets/40952c95-24c7-4ebc-9591-4f72c709bff9)
 
 To enhance clarity for future project contributors, I've implemented a labelling system for all tickets/issues. While some default GitHub labels are used, I've introduced custom labels for better readability.
 - **Priority Labels**: Instead of relying on potentially confusing Kanban board conventions, I've implemented clear labels: "Low," "Medium," and "High." This provides unambiguous prioritisation guidance.
@@ -125,3 +133,12 @@ This labelling system improves overall project transparency. By easily identifyi
 ### **Ticket Template**
 
 To ensure consistency and clarity across all issues, I created ticket templates for features, bugs, and administrative tasks. These templates incorporate essential fields such as title, description, steps to reproduce (for bugs), acceptance criteria, and priority. This standardised format enhances issue clarity, enabling developers, testers, and stakeholders to quickly grasp the issue's context and requirements.
+
+## Product Design 
+
+### **Wireframes**
+
+[**Link to FIGMA**](https://www.figma.com/design/TxahAcFE0fKvE83818Me3M/se_sum1_WeatherApp_design?node-id=21-205&t=QV6HiuyMMA8krCc4-1)
+
+![Image 20-01-2025 at 11 36](https://github.com/user-attachments/assets/e71c282b-b6b9-45e7-bcf0-488c439cece5)
+
