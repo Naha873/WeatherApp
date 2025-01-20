@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-coverage"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
   "repository": {
     "type": "git",
@@ -14,5 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "jest": "^29.7.0"
+  },
+  "devDependencies": {
+    "jest-environment-jsdom": "^29.7.0",
+    "node-fetch": "^3.3.2"
   }
 }
