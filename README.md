@@ -132,6 +132,8 @@ This labelling system improves overall project transparency. By easily identifyi
 
 ### **Ticket Template**
 
+![Image 20-01-2025 at 12 08](https://github.com/user-attachments/assets/3ca29763-b448-4e9f-933d-f5172965239d)
+
 To ensure consistency and clarity across all issues, I created ticket templates for features, bugs, and administrative tasks. These templates incorporate essential fields such as title, description, steps to reproduce (for bugs), acceptance criteria, and priority. This standardised format enhances issue clarity, enabling developers, testers, and stakeholders to quickly grasp the issue's context and requirements.
 
 ## Product Design 
