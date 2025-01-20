@@ -1,0 +1,144 @@
+body {
+    background-color: #12263E;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    align-items: center;
+    min-height: 80%;
+    min-width: 40%; 
+    margin: 30;
+}
+
+.container {
+    background-color: #A7EDEF;
+    display: block;
+    padding: 30px;
+    border-radius: 20px;
+    height: 250px;
+}
+
+.search-container {
+    display: flex; 
+    align-items: center; 
+} 
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #E7E9ED;
+    width: 80%; 
+    height: 7%;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    color: #000000;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 22px; 
+}
+
+.switch-container {
+    display: flex;
+    align-items: centre;
+    background-color: #89939F; /* Add background color for the white box */
+    border-radius: 20px; /* Add rounded corners */
+    padding: 10px; /* Add some padding inside the box */
+    margin-left: 10px; /* Add some space between search bar and switch container */
+    width: 20%;
+    height: 7%;
+    margin-bottom: 20px;
+
+}
+
+.switch-container span {
+    margin-left: auto; /* Adjust this value as needed */
+    font-weight: bold; /* Make Celsius text bold */
+    font-size: 26px;
+  }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 37px;
+    margin-left: 5px; 
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 37px;
+    transition: .5s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #12263E;
+    border-radius: 70%;
+    transition: .5s;
+}
+
+input:checked + .slider {
+    background-color: #fff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(37px);
+}
+
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.temperature {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.city-info {
+    text-align: right;
+}
+
+.weather-icon {
+    text-align: center;
+}
+
+.weather-icon img {
+    width: 80px;
+}
+
+.forecast {
+    display: flexbox;
+    justify-content: space-between;
+}
+
+.forecast-container { 
+    margin-top: 20px; /* Add margin-top to create space */
+    background-color: #A7EDEF;
+    display: block;
+    padding: 30px;
+    border-radius: 20px;
+    height: 250px;
+}
+.forecast-item {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space elements evenly within the container */
+    text-align: center;
+}

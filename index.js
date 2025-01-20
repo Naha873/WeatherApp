@@ -73,6 +73,17 @@ async function getWeatherData(latitude, longitude) {
     }
     return (celsius * 9/5) + 32;
   }
+
+const switchInput = document.querySelector('input[type="checkbox"]');
+const temperatureUnit = document.getElementById('temperature-unit');
+  
+switchInput.addEventListener('change', () => {
+    if (switchInput.checked) {
+      temperatureUnit.textContent = "Fahrenheit"; 
+    } else {
+      temperatureUnit.textContent = "Celsius"; 
+    }
+  });
   
  module.exports = {getWeatherData, getDailyWeatherData, getLocation, celsiusToFahrenheit}; // Export the function directly
   
