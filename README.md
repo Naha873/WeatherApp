@@ -109,6 +109,15 @@ User stories are concise descriptions of features, told from the user's perspect
 - [ ] The forecast data should be presented in a clear and concise manner.
 - [ ] The app should handle any errors in retrieving the forecast data.
 
+## **Risk Management**
+To ensure the product's success, it's important to identify and mitigate potential risks that could hinder the development of the weather app. Therefore, I've compiled a risk matrix. It evaluates each risk, considering its likelihood, its potential impact on the project, its overall risk level, and outlines a mitigation strategy.
+
+Risk | Likelihood | Impact | Risk Level | Mitigation |
+|---|---|---|---|---|
+API is down |Low | High | Critical | Have a backup API or source |
+Delay in project time due to additional feature demands | Medium | Medium | Medium | Ensure that you’re sticking to MoSCoW and User story cards, sticking to core functionalities |
+Delay in project due to error and bugs | High | Medium | Medium | Use TTD and testing to mitigate this occurring | 
+
 ## Project Management 
 
 ### **Agile Development Methodology**
