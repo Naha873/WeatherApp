@@ -1,4 +1,4 @@
-const { getWeatherData, getDailyWeatherData, getLocation } = require('./index');
+const { getWeatherData, getDailyWeatherData, getLocation, celsiusToFahrenheit } = require('./index');
 
 test('fetches current temperature and weather code', async () => {
     const latitude = 51.5085; // Example latitude
@@ -29,4 +29,8 @@ test('fetches current temperature and weather code', async () => {
     expect(locationData.longitude).toBeDefined(); 
   });
   
-
+  test('celsius to fahrenheit', async () => {
+    const celsius = 30;
+    const fahrenheit = celsiusToFahrenheit(celsius);
+    expect(fahrenheit).toBe(86);
+  });
