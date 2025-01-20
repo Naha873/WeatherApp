@@ -144,3 +144,17 @@ To ensure consistency and clarity across all issues, I created ticket templates 
 
 ![Image 20-01-2025 at 11 36](https://github.com/user-attachments/assets/e71c282b-b6b9-45e7-bcf0-488c439cece5)
 
+The initial stage of the project, following the gathering of requirements and user stories, involved designing the product. Utilising Figma, I adopted the role of a product designer and developed three functionally equivalent designs with distinct layouts. This approach enabled me to explore different visual presentations and information flows.
+To determine the most effective design, user testing eg A/B testing would be ideal. However, due to ethical and security constraints within the context of this assignment, I conducted a simulated user testing process. I critically evaluated each design from the perspective of a target user, considering factors such as usability, accessibility, and overall user experience.
+Based on this evaluation, I selected the third design. It demonstrated a well-balanced use of space, providing a clean and intuitive user interface while effectively conveying the necessary information.
+
+## **Colour scheme**
+
+![image](https://github.com/user-attachments/assets/379cde07-a346-43ff-afa9-b38ba375cdb4)
+
+Source: https://www.bankofengland.co.uk/news/2022/march/new-visual-identity 
+
+A crucial aspect of website design is ensuring accessibility, and this extends to the colour scheme. The World Wide Web Consortium (W3C) (https://www.w3.org/mission/accessibility/) provides essential guidance on this topic. Fortunately, my company adheres to these guidelines with a well-established colour scheme that I'll be incorporating into my design. Additionally, using this pre-defined scheme offers several advantages:
+- Consistency: It aligns my design with the company's established brand identity.
+- Efficiency: It saves time and resources compared to developing a new colour scheme from scratch.
+- Accessibility Assurance: Since the scheme adheres to W3C guidelines, it inherently promotes accessibility in my design
