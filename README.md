@@ -1,6 +1,7 @@
 # WeatherApp
 
 [![Node.js CI](https://github.com/Naha873/WeatherApp/actions/workflows/node.js.yml/badge.svg)](https://github.com/Naha873/WeatherApp/actions/workflows/node.js.yml)
+[![codecov](https://codecov.io/github/Naha873/WeatherApp/graph/badge.svg?token=O4C01XHHYJ)](https://codecov.io/github/Naha873/WeatherApp)
 
 ## Project introduction and proposal
 
