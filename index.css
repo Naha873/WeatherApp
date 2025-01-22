@@ -12,10 +12,11 @@ body {
 .container {
     background-color: #A7EDEF;
     flex-direction: row;
+    align-items: center;
     display: block;
     padding: 30px;
     border-radius: 20px;
-    height: 250px;
+    height: 850px;
 }
 
 .search-container {
@@ -103,47 +104,27 @@ input:checked + .slider:before {
 
 .current-weather {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    width: 650px;
+    margin-top: 50px;
+    gap: 90px;
 }
 
 .temperature {
-    font-size: 100px;
-    font-weight: bold;
-    height: 3px;
-    width: 70px;
-}
+    font-size: 200px;
+    font-weight: bold;}
 
 .city-info {
-    text-align: right;
-    width: 700px;
+    font-size: 50px;
 }
 
-.weather-icon {
-    text-align: center;
+.time-info {
+    font-size: 50px;
 }
 
-.weather-icon img {
-    width: 80px;
+.weather-info{
+    font-size: 50px;
 }
 
-.forecast {
-    display: flexbox;
-    justify-content: space-between;
-}
-
-.forecast-container { 
-    margin-top: 20px; /* Add margin-top to create space */
-    background-color: #A7EDEF;
-    display: block;
-    padding: 30px;
-    border-radius: 20px;
-    height: 250px;
-}
-.forecast-item {
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: space-between; /* Space elements evenly within the container */
-    text-align: center;
-}

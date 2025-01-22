@@ -19,28 +19,6 @@ async function getWeatherData(latitude, longitude) {
       throw error;
     }
   }
-  
-  async function getDailyWeatherData(latitude, longitude) {
-    try {
-      const response = await fetch(
-        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=weather_code,temperature_2m_max&timezone=auto`      );
-  
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-  
-      const data = await response.json();
-  
-      // Return an object with both properties
-      return {
-        weatherCode: data.daily.weather_code.slice(1,4),
-        temperatureMax: data.daily.temperature_2m_max.slice(1,4), // Adjust property name if needed
-      };
-    } catch (error) {
-      console.error('Error fetching weather data:', error);
-      throw error;
-    }
-  }
 
   async function getLocation(location) {
     try {
@@ -73,20 +51,5 @@ async function getWeatherData(latitude, longitude) {
     }
     return (celsius * 9/5) + 32;
   }
-  
-/*
-  function handleSwitchChange() {
-    const switchInput = document.querySelector('input[type="checkbox"]');
-    const temperatureUnit = document.getElementById('temperature-unit');
-  
-    switchInput.addEventListener('change', () => {
-      if (switchInput.checked) {
-        temperatureUnit.textContent = "Fahrenheit"; 
-      } else {
-        temperatureUnit.textContent = "Celsius"; 
-      }
-    });
-  }
-  */
- module.exports = {getWeatherData, getDailyWeatherData, getLocation, celsiusToFahrenheit}; // Export the function directly
+ module.exports = {getWeatherData, getLocation, celsiusToFahrenheit}; // Export the function directly
   
