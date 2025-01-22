@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="search-container"> 
+    <div class="search-container">
         <div class="search-bar">
-            <input type="text" placeholder="Search for your city...">
+            <input type="text" id="search-input" placeholder="Search for your city...">
+            <button id="search-button">Search</button>
         </div>
-        <div class="switch-container"> 
+        <div class="switch-container">
             <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" id="unit-toggle">
                 <span class="slider round"></span>
             </label>
-            <span id="temperature-unit">Celsius</span> 
+            <span id="temperature-unit">Celsius</span>
         </div>
     </div>
     <div class="container">
@@ -24,20 +25,43 @@
         </div>
         <div class="current-weather">
             <div class="city-info">
-                <span>London</span>
+                <span id="city-name">London</span>
             </div>
             <div class="time-info">
-                <span>9:45</span>
+                <span id="current-time">9:45</span>
             </div>
             <div class="temperature">
-                <span>30°C</span>
+                <span id="current-temperature">30°C</span>
             </div>
             <div class="weather-info">
-                <span>Sunny with clouds</span>
+                <span id="weather-description">Sunny with clouds</span>
             </div>
+        </div>
     </div>
-    <script type="module" src="./index.js"></script> 
-    <script type="module" src="./index.test.js"></script> 
+ <script src="index.js"></script>
+ <script>
+    const searchBar = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    
+    searchButton.addEventListener('click', async () => {
+        const location = searchBar.value;
+        try {
+            // Get location coordinates
+            const { latitude, longitude } = await getLocation(location);
+            // Get weather data
+            const weatherData = await getWeatherData(latitude, longitude);
+            // Update UI
+            document.getElementById('city-name').textContent = location;
+            document.getElementById('current-temperature').textContent = `${weatherData.temperature}°C`;
+            // Update weather description based on weather code
+            const weatherDesc = getWeatherDescription(weatherData.weatherCode);
+            document.getElementById('weather-description').textContent = weatherDesc;
+        } catch (error) {
+            console.error(error);
+            alert('Error fetching weather data!');
+        }
+    });
+ </script>
 </body>
 </html>
 
