@@ -17,6 +17,40 @@ The app will initially utilise the open-meteo.com weather API and geocoding API 
 
 ![Image 19-01-2025 at 19 16](https://github.com/user-attachments/assets/01918fee-248b-4be3-ab36-7c9eac6efb34)
 
+# User Documentation
+
+This project requires npm to execute the files, so ensure that it is installed.
+
+### 1. Ensure node and npm are installed by running the following commands in your terminal:
+
+```sh
+node -v
+```
+```sh
+npm -v
+```
+If they are not installed, follow the steps on [npm Docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+### 2. Afterwards, clone this repo:
+
+```sh
+git clone https://github.com/EDGENortheastern/dan-m-dec22.git
+```
+Now, you should have everything that you need to proceed! Navigate into the folder you just cloned to find our code.
+
+## Running all tests
+
+### 3. Before running any code below, make sure npm is installed.
+
+```sh
+npm install
+```
+### 4. To run logic and unit tests for our app, run the following command:
+
+```sh
+npm test
+```
+
 ## Project requirement
 
 1. User Interface
@@ -156,3 +190,5 @@ A crucial aspect of website design is ensuring accessibility, and this extends t
 - Consistency: It aligns my design with the company's established brand identity.
 - Efficiency: It saves time and resources compared to developing a new colour scheme from scratch.
 - Accessibility Assurance: Since the scheme adheres to W3C guidelines, it inherently promotes accessibility in my design
+
+
