@@ -1,31 +1,31 @@
 const { getWeatherData, getLocation, celsiusToFahrenheit,getWeatherDescription } = require('./index');
 
 test('fetches current temperature and weather code', async () => {
-    const latitude = 51.5085; // Example latitude
-    const longitude = -0.1257; // Example longitude
+    const latitude = 51.5085; 
+    const longitude = -0.1257; 
   
-    const weatherData = await getWeatherData(latitude, longitude);
+    const weatherData = await getWeatherData(latitude, longitude); 
   
     expect(weatherData.temperature).toBeDefined(); 
-    expect(weatherData.weatherCode).toBeDefined(); 
+    expect(weatherData.weatherCode).toBeDefined();  
 
   });
 
-  test('fetches latitude and longitude data', async () => {
+test('fetches latitude and longitude data', async () => {
     const location = "Berlin"; 
-    const locationData = await getLocation(location);
+    const locationData = await getLocation(location); 
   
     expect(locationData.latitude).toBeDefined();
     expect(locationData.longitude).toBeDefined(); 
   });
   
-  test('celsius to fahrenheit', async () => {
-    const celsius = 30;
-    const fahrenheit = celsiusToFahrenheit(celsius);
-    expect(fahrenheit).toBe(86);
+test('celsius to fahrenheit', async () => {
+    const celsius = 30; 
+    const fahrenheit = celsiusToFahrenheit(celsius); 
+    expect(fahrenheit).toBe(86); 
   });
 
-  test('getWeatherData throws an error for non-OK responses', async () => {
+test('getWeatherData throws an error for non-OK responses', async () => {
     const latitude = 51.505;
     const longitude = -0.09;
   
@@ -40,7 +40,7 @@ test('fetches current temperature and weather code', async () => {
     );
   });
 
-  test('getLocation throws an error for non-OK responses or missing location data', async () => {
+test('getLocation throws an error for non-OK responses or missing location data', async () => {
     const location = 'London';
   
     // Scenario 1: Mock fetch with non-OK response (e.g., 404 Not Found)
@@ -62,7 +62,7 @@ test('fetches current temperature and weather code', async () => {
     );
   });
 
-  test('celsiusToFahrenheit throws an error for non-numeric input', () => {
+test('celsiusToFahrenheit throws an error for non-numeric input', () => {
     expect(() => celsiusToFahrenheit("invalid")).toThrow('Input must be a number');
     expect(() => celsiusToFahrenheit(null)).toThrow('Input must be a number');
     expect(() => celsiusToFahrenheit(undefined)).toThrow('Input must be a number');

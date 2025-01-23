@@ -54,10 +54,10 @@ body {
 .switch-container {
     display: flex;
     align-items: centre;
-    background-color: #89939F; /* Add background color for the white box */
-    border-radius: 20px; /* Add rounded corners */
-    padding: 10px; /* Add some padding inside the box */
-    margin-left: 10px; /* Add some space between search bar and switch container */
+    background-color: #89939F; 
+    border-radius: 20px; 
+    padding: 10px; 
+    margin-left: 10px; 
     width: 20%;
     height: 7%;
     margin-bottom: 20px;
@@ -65,8 +65,8 @@ body {
 }
 
 .switch-container span {
-    margin-left: auto; /* Adjust this value as needed */
-    font-weight: bold; /* Make Celsius text bold */
+    margin-left: auto; 
+    font-weight: bold; 
     font-size: 26px;
   }
 
