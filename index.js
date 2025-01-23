@@ -1,37 +1,50 @@
 async function getWeatherData(latitude, longitude) {
     try {
+        // Fetch weather data from the Open-Meteo API using the provided coordinates
         const response = await fetch(
             `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code&timezone=auto`
         );
+        // Check if the API request was successful (status code 200)
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`HTTP error! status: ${response.status}`); 
         }
-        const data = await response.json();
+        // Convert the response to JSON format
+        const data = await response.json(); 
+        // Return an object containing the retrieved temperature and weather code
         return {
-            temperature: data.current.temperature_2m,
-            weatherCode: data.current.weather_code,
+            temperature: data.current.temperature_2m, 
+            weatherCode: data.current.weather_code, 
         };
     } catch (error) {
-        console.error('Error fetching weather data:', error);
+        // Log and re-throw the error for proper handling.
+        console.error('Error fetching weather data:', error); 
         throw error;
     }
 }
 
 async function getLocation(location) {
+ // Try block to handle potential errors during location lookup
     try {
+        // Fetch location data from the OpenMeteo Geocoding API
         const response = await fetch(
             `https://geocoding-api.open-meteo.com/v1/search?name=${location}&count=1&language=en&format=json`
         );
+        // Check if the response was successful (status code 200)
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`HTTP error! status: ${response.status}`); 
         }
+        // Convert the response to JSON format
         const data = await response.json();
+        // Check if the location was not found in the response
         if (data.results.length === 0) {
-            throw new Error(`Location "${location}" not found.`);
+            throw new Error(`Location "${location}" not found.`); 
         }
+        // Extract latitude and longitude from the first search result
         const { latitude, longitude } = data.results[0];
+        // Return an object containing the retrieved latitude and longitude
         return { latitude, longitude };
     } catch (error) {
+        // Log and re-throw the error for proper handling.
         console.error('Error fetching location coordinates:', error);
         throw error;
     }
@@ -39,12 +52,19 @@ async function getLocation(location) {
 
 function celsiusToFahrenheit(celsius) {
     if (typeof celsius !== 'number') {
-        throw new Error('Input must be a number');
+        // throws an error is celsius is not a number
+        throw new Error('Input must be a number'); 
     }
-    return (celsius * 9/5) + 32;
+    // conversion calculation
+    return (celsius * 9/5) + 32; 
 }
 
 function getWeatherDescription(code) {
+    /**
+   * Returns a human-readable description of the weather based on the given weather code.
+   * @param {number} code - The weather code, as defined by the Open-Meteo API.
+   * @returns {string} - A description of the weather condition.
+   */
     if (code === 0) return "Clear sky";
     if (code >= 1 && code <= 3) return "Partly cloudy";
     if (code === 45 || code === 48) return "Foggy";

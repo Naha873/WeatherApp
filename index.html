@@ -39,13 +39,14 @@
     </div>
     <script src="index.js"></script>
     <script>
+        // Select HTML elements
         const searchBar = document.getElementById('search-input');
         const searchButton = document.getElementById('search-button');
         const unitToggle = document.getElementById('unit-toggle');
         const temperatureUnit = document.getElementById('temperature-unit');
         const currentTemperature = document.getElementById('current-temperature');
 
-        // Function 1: Update Current Date
+        // Function to Update Current Date (in html due to it relating to DOM element)
         function updateCurrentDate() {
             const currentDate = new Date();
             const weekday = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
@@ -62,11 +63,11 @@
             return ['th', 'st', 'nd', 'rd'][(n % 100 > 10 && n % 100 < 14) ? 0 : (n % 10 < 4) ? n % 10 : 0];
         }
 
-        // Function 2: Temperature Unit Toggle
+        // Temperature Unit Toggle
         let currentTemp = 30; // Initial temperature
 
         unitToggle.addEventListener('change', () => {
-            if (unitToggle.checked) {
+            if (unitToggle.checked) { // convert to fahrenheirt
                 const fahrenheitTemp = celsiusToFahrenheit(currentTemp);
                 currentTemperature.textContent = `${fahrenheitTemp.toFixed(1)}°F`;
                 temperatureUnit.textContent = 'Fahrenheit';
@@ -81,28 +82,34 @@
 
         // Search button event listener
         searchButton.addEventListener('click', async () => {
+            // Get the city name entered by the user
             const location = searchBar.value;
             try {
+                // Get the location coordinates
                 const { latitude, longitude } = await getLocation(location);
+                // Fetch weather data for the given coordinates
                 const weatherData = await getWeatherData(latitude, longitude);
-                
+                // Update the current temperature
                 currentTemp = weatherData.temperature;
-                
+                // Update the displayed city name
                 document.getElementById('city-name').textContent = location;
-                
+                // Update the temperature display based on the unit toggle
                 if (unitToggle.checked) {
                     const fahrenheitTemp = celsiusToFahrenheit(currentTemp);
-                    document.getElementById('current-temperature').textContent = `${fahrenheitTemp.toFixed(1)}°F`;
+                    document.getElementById('current-temperature').textContent = `${fahrenheitTemp.toFixed(1)}°F`; // show conversion to 1 decimal place
                     temperatureUnit.textContent = 'Fahrenheit';
                 } else {
                     document.getElementById('current-temperature').textContent = `${currentTemp}°C`;
                     temperatureUnit.textContent = 'Celsius';
                 }
-                
+                // Get the weather description from the weather code
                 const weatherDesc = getWeatherDescription(weatherData.weatherCode);
+                // Update the displayed weather description
                 document.getElementById('weather-description').textContent = weatherDesc;
             } catch (error) {
+                // Log the error to the console for debugging
                 console.error(error);
+                // Display an error message to the user
                 alert('Error fetching weather data!');
             }
         });
