@@ -7,6 +7,11 @@
 
 [**Live app**](https://naha873.github.io/WeatherApp/)
 
+Author: Hana Wainwright
+
+Github Username: @Naha873
+
+**Preview**
 ![Screenshot 2025-01-23 at 22 45 01](https://github.com/user-attachments/assets/324f4938-5969-4082-b25a-8a9c01db5a8f)
 
 This weather app displays current temperature, date, and weather for a searched location, with Celsius/Fahrenheit units. 
@@ -58,6 +63,29 @@ npm install
 ```sh
 npm test
 ```
+## Technical documentation
+
+1. Technical stack
+    - HTML
+    - JEST
+    - CSS
+    - Javascript
+
+2. Files used to run the app
+    - index.js
+    - Index.css
+    - index.html
+
+3. Files used in testing
+    - index.test.js
+    - index.js
+    - package.json
+
+4. User end links
+    - Repo name: Weather app
+    - Repo link: https://naha873.github.io/WeatherApp/
+    - Weather data API link: https://open-meteo.com/en/docs#current=temperature_2m,weather_code&hourly=
+    - Location data API link: https://open-meteo.com/en/docs/geocoding-api#name=london&count=100
 
 ## Project requirement
 
@@ -151,7 +179,7 @@ Delay in project due to error and bugs | High | Medium | Medium | Use TTD and te
 | Role    | Responsibility | Notes |
 | -------- | ------- | ------- |
 | Project Manager  | Project oversight    | As this is a solo project, I’ll be project manager |
-| Developer | Application development     | As this is a solo project, I’ll be developer   |
+| Developer | Product development     | As this is a solo project, I’ll be developer   |
 | Designer    | Product designer   | As this is a solo project, I’ll be designer  |
 | Analyst    | Client representative   |  As this is a solo project, I’ll be the analyst|
 
@@ -205,30 +233,6 @@ A crucial aspect of website design is ensuring accessibility, and this extends t
 - Consistency: It aligns my design with the company's established brand identity.
 - Efficiency: It saves time and resources compared to developing a new colour scheme from scratch.
 - Accessibility Assurance: Since the scheme adheres to W3C guidelines, it inherently promotes accessibility in my design
-
-## Technical documentation
-
-1. Technical stack
-    - HTML
-    - JEST
-    - CSS
-    - Javascritpt
-
-2. Files used to run the app
-    - index.js
-    - Index.css
-    - index.html
-
-3. Files used in testing
-    - index.test.js
-    - index.js
-    - package.json
-
-4. User end links
-    - Repo name: Weather app
-    - Repo link: https://naha873.github.io/WeatherApp/
-    - Weather data API link: https://open-meteo.com/en/docs#current=temperature_2m,weather_code&hourly=
-    - Location data API link: https://open-meteo.com/en/docs/geocoding-api#name=london&count=100
 
 ## Code Implementation
 
@@ -309,6 +313,6 @@ Manual testing was conducted to verify specific functionalities. Inputting gibbe
 The weather app successfully meets all acceptance criteria outlined in the user story cards, effectively addressing user needs with clear presentation of essential information. Interactive features, such as the intuitive search bar and the convenient Celsius/Fahrenheit toggle, enhance user experience.
 
 While successful, the prototype exhibits some limitations. Firstly, the current API displays a 15-minute delay in temperature updates, necessitating budget discussions for a more accurate and real-time data source. Secondly, the current layout is not responsive, becoming unusable on narrower screens.
-These limitations, along with user feedback on the MVP, will inform the next iteration, ensuring they’re fully addressed in the final version.
+These limitations, along with user feedback on the MVP and the lighthouse results, will inform the next iteration, ensuring they’re fully addressed in the final version.
 
 
