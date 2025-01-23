@@ -191,4 +191,27 @@ A crucial aspect of website design is ensuring accessibility, and this extends t
 - Efficiency: It saves time and resources compared to developing a new colour scheme from scratch.
 - Accessibility Assurance: Since the scheme adheres to W3C guidelines, it inherently promotes accessibility in my design
 
+## Technical documentation
+
+1. Technical stack
+- HTML
+- JEST
+- CSS
+- Javascritpt
+
+2. Files used to run the app
+- index.js
+- Index.css
+- index.html
+
+3. Files used in testing
+- index.test.js
+- index.js
+- package.json
+
+4. User end links
+- Repo name: Weather app
+- Repo link: https://naha873.github.io/WeatherApp/
+- Weather data API link: https://open-meteo.com/en/docs#current=temperature_2m,weather_code&hourly=
+- Location data API link: https://open-meteo.com/en/docs/geocoding-api#name=london&count=100
 
