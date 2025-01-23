@@ -16,7 +16,7 @@ body {
     display: block;
     padding: 30px;
     border-radius: 20px;
-    height: 850px;
+    height: 700px;
 }
 
 .search-container {
@@ -115,7 +115,7 @@ input:checked + .slider:before {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    margin-top: 50px;
+    margin-top: 30px;
     gap: 90px;
 }
 
@@ -125,10 +125,12 @@ input:checked + .slider:before {
 
 .city-info {
     font-size: 50px;
+    font-weight: bold;
+
 }
 
 .time-info {
-    font-size: 50px;
+    font-size: 47px;
 }
 
 .weather-info{
