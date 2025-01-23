@@ -23,9 +23,8 @@ The app will initially utilise the open-meteo.com weather API and geocoding API 
 - Search bar for user to input location by city/town
 - Clear temperature display 
 - Button to switch between celsius and fahrenheit 
-- Date, time and selected location displayed 
-- 3/4 hours of hourly temperature forecast 
-
+- Date and selected location displayed
+  
 2. Data
 - Live temperature data through API 
 - Live location options through API
@@ -48,12 +47,12 @@ Having outlined the requirements above, I prioritised them using the MoSCoW meth
 | Must Have | Should Have | Could Have | Won't Have |
 |---|---|---|---|
 | User input box | Location validation | Error message displayed for Network error and invalid city | Other weather info |
-| API for locations and temperature | Icon display for weather  |  | Weather alerts  |
+| API for locations and temperature | Icon display for weather  |  3/4 hour forecast| Weather alerts  |
 | Location, temp displayed |  |  | Mobile app development |
-| 3/4 hour forecast | | | Visualisations (Charts and graphs) | 
+|  | | | Visualisations (Charts and graphs) | 
 
 ## Agile Story Cards
-User stories are concise descriptions of features, told from the user's perspective. By focusing on "who," "what," and "why," user stories clearly communicate what features are of high priority. They help those involved to best understand user needs and goals, leading to the development of the right features in the right way. Below, I have written 4 stories which establish a clear roadmap for development, ensuring the final product meets user expectations.
+User stories are concise descriptions of features, told from the user's perspective. By focusing on "who," "what," and "why," user stories clearly communicate what features are of high priority. They help those involved to best understand user needs and goals, leading to the development of the right features in the right way. Below, I have written 3 stories which establish a clear roadmap for development, ensuring the final product meets user expectations.
 
 ### ***User Story 1: View Current Temperature***
 
@@ -65,7 +64,6 @@ User stories are concise descriptions of features, told from the user's perspect
 
 **Acceptance criteria:** 
 - [ ] The app shall display the current temperature for the default location (London) on initial load.
-- [ ] The app should have pictures that also depict the weather. 
 - [ ] App shall Display the current location (the default, when initially opened) , date and time. 
 - [ ] The temperature should be displayed in the default unit Celsius, with a user-friendly mechanism (e.g., a toggle button, a dropdown menu) to switch between Celsius and Fahrenheit.
 
@@ -98,19 +96,6 @@ User stories are concise descriptions of features, told from the user's perspect
 - [ ] When the unit is switched, the displayed temperature must be dynamically updated to the selected unit.
 - [ ] The temperature conversion must be accurate (e.g., Celsius to Fahrenheit: (°C * 9/5) + 32).
 
-### ***User Story 4: View Short-Term Weather Forecast***
-
-**As a** company employee, 
-
-**I want to** see the temperature and weather for the next 3 or 4 hours, 
-
-**So that** I can plan for immediate weather changes that may impact my work.
-
-**Acceptance criteria:** 
-- [ ] Temperature readings for the next 3-4 hours at hourly intervals.
-- [ ] Weather conditions for each hour (e.g., sunny, cloudy, rainy).
-- [ ] The forecast data should be presented in a clear and concise manner.
-- [ ] The app should handle any errors in retrieving the forecast data.
 
 ## **Risk Management**
 To ensure the product's success, it's important to identify and mitigate potential risks that could hinder the development of the weather app. Therefore, I've compiled a risk matrix. It evaluates each risk, considering its likelihood, its potential impact on the project, its overall risk level, and outlines a mitigation strategy.
@@ -154,11 +139,12 @@ To ensure consistency and clarity across all issues, I created ticket templates 
 
 [**Link to FIGMA**](https://www.figma.com/design/TxahAcFE0fKvE83818Me3M/se_sum1_WeatherApp_design?node-id=21-205&t=QV6HiuyMMA8krCc4-1)
 
-![Image 20-01-2025 at 11 36](https://github.com/user-attachments/assets/e71c282b-b6b9-45e7-bcf0-488c439cece5)
+![Image 23-01-2025 at 12 27](https://github.com/user-attachments/assets/8402801d-beb1-43f2-b4f4-c738dbba6b9d)
+
 
 The initial stage of the project, following the gathering of requirements and user stories, involved designing the product. Utilising Figma, I adopted the role of a product designer and developed three functionally equivalent designs with distinct layouts. This approach enabled me to explore different visual presentations and information flows.
 To determine the most effective design, user testing eg A/B testing would be ideal. However, due to ethical and security constraints within the context of this assignment, I conducted a simulated user testing process. I critically evaluated each design from the perspective of a target user, considering factors such as usability, accessibility, and overall user experience.
-Based on this evaluation, I selected the third design. It demonstrated a well-balanced use of space, providing a clean and intuitive user interface while effectively conveying the necessary information.
+Based on this evaluation, I selected the second design as it demonstrated a well-balanced use of space, providing a clean and intuitive user interface while effectively conveying the necessary information.
 
 ## **Colour scheme**
 
