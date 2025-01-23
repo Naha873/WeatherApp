@@ -15,7 +15,7 @@ The app will initially utilise the open-meteo.com weather API and geocoding API 
 
 **High level overview of project**
 
-![Image 19-01-2025 at 19 16](https://github.com/user-attachments/assets/01918fee-248b-4be3-ab36-7c9eac6efb34)
+![Image 23-01-2025 at 17 39](https://github.com/user-attachments/assets/56837d46-4c8c-4b10-861b-04774f085f2f)
 
 # User Documentation
 
@@ -45,7 +45,7 @@ Now, you should have everything that you need to proceed! Navigate into the fold
 ```sh
 npm install
 ```
-### 4. To run logic and unit tests for our app, run the following command:
+### 4. To run unit tests, run the following command:
 
 ```sh
 npm test
@@ -54,21 +54,21 @@ npm test
 ## Project requirement
 
 1. User Interface
-- Search bar for user to input location by city/town
-- Clear temperature display 
-- Button to switch between celsius and fahrenheit 
-- Date and selected location displayed
+    - Search bar for user to input location by city/town
+    - Clear temperature display 
+    - Button to switch between celsius and fahrenheit 
+    - Date and selected location displayed
   
 2. Data
-- Live temperature data through API 
-- Live location options through API
+    - Live temperature data through API 
+    - Live location options through API
 
 3. Error handling
-- If connection to API isn’t working, display error message
-- If invalid city name, display error message 
+    - If connection to API isn’t working, display error message
+    - If invalid city name, display error message 
 
 4. Validation
-- Ensure valid city names have been input in search bar
+    - Ensure valid city names have been input in search bar
 
 **MoSCoW Prioritisation**
 
@@ -83,7 +83,7 @@ Having outlined the requirements above, I prioritised them using the MoSCoW meth
 | User input box | Location validation | Error message displayed for Network error and invalid city | Other weather info |
 | API for locations and temperature | Icon display for weather  |  3/4 hour forecast| Weather alerts  |
 | Location, temp displayed |  |  | Mobile app development |
-|  | | | Visualisations (Charts and graphs) | 
+|  | | | Visualisations | 
 
 ## Agile Story Cards
 User stories are concise descriptions of features, told from the user's perspective. By focusing on "who," "what," and "why," user stories clearly communicate what features are of high priority. They help those involved to best understand user needs and goals, leading to the development of the right features in the right way. Below, I have written 3 stories which establish a clear roadmap for development, ensuring the final product meets user expectations.
@@ -194,24 +194,75 @@ A crucial aspect of website design is ensuring accessibility, and this extends t
 ## Technical documentation
 
 1. Technical stack
-- HTML
-- JEST
-- CSS
-- Javascritpt
+    - HTML
+    - JEST
+    - CSS
+    - Javascritpt
 
 2. Files used to run the app
-- index.js
-- Index.css
-- index.html
+    - index.js
+    - Index.css
+    - index.html
 
 3. Files used in testing
-- index.test.js
-- index.js
-- package.json
+    - index.test.js
+    - index.js
+    - package.json
 
 4. User end links
-- Repo name: Weather app
-- Repo link: https://naha873.github.io/WeatherApp/
-- Weather data API link: https://open-meteo.com/en/docs#current=temperature_2m,weather_code&hourly=
-- Location data API link: https://open-meteo.com/en/docs/geocoding-api#name=london&count=100
+    - Repo name: Weather app
+    - Repo link: https://naha873.github.io/WeatherApp/
+    - Weather data API link: https://open-meteo.com/en/docs#current=temperature_2m,weather_code&hourly=
+    - Location data API link: https://open-meteo.com/en/docs/geocoding-api#name=london&count=100
 
+## Code Implementation
+
+Step-by-Step guide on how i made the prototype. 
+
+1. Project Setup:
+    - Cloned the repository.
+    - Installed Node.js and configured the environment.
+    - Created the files: index.js, index.test.js, index.html, index.css.
+
+2. API Integration:
+    - Wrote initial failing tests for API call functions in index.test.js.
+    - Implemented API call functions and ensured all tests passed.
+    - Added robust error handling to API calls and tested these scenarios.
+
+3. Temperature Conversion:
+    - Wrote failing tests for temperature metric conversion functions in index.test.js.
+    - Implemented functions to convert temperature metrics accurately.
+
+4. Weather Description Mapping:
+    - Wrote failing tests for this mapping function and ensured its correctness.
+    - Implemented a function to map weather codes to meaningful descriptions.
+
+5. Frontend Development:
+    - Designed and implemented the CSS and HTML structure for the UI.
+    - Connected the JavaScript functions to the HTML elements using DOM manipulation.
+
+6. Testing and Refinement:
+    - Ran all tests and reviewed test coverage.
+
+7. Deployment:
+    - Deployed the project to GitHub Pages for public access.
+
+## Coding Practice
+
+To maintain code readability and maintainability, I adhered to consistent camelCase naming conventions throughout the JavaScript files. Code is correctly indented and includes clear concise comments in plain English to explain the purpose of each line or block of code.
+
+![Image 23-01-2025 at 22 21](https://github.com/user-attachments/assets/e3644d3d-34cc-48fb-a3e4-c6d598720b2d)
+
+## Test driven development (TDD) - Unit testing 
+
+I used Test-Driven Development (TDD) to create Jest unit tests for the logic functions employed within the project and are documented within the 'index.test.js' file. Jest is a JavaScript testing framework that is simple to set up and is renowned for its speed and efficiency. Unit tests helped to ensure that we identified any potential bugs and errors in the code development very early on and ultimately led to a more robust and reliable final product. Moreover, this approach forced me to focus on key requirements and implementing accurate logic and therefore, minimised deviations from the specified user needs.
+
+**Example test**
+![Image 23-01-2025 at 21 43](https://github.com/user-attachments/assets/58f9523f-926b-46ac-87ac-75d7fd66b419)
+
+**All test passed with 100% coverage score**
+![Image 23-01-2025 at 17 46](https://github.com/user-attachments/assets/c891cb68-5045-4a31-bb49-1bc4fc198b08)
+
+## Continuous Integration and Development 
+
+To ensure Continuous Integration and Continuous Delivery (CI/CD), I have implemented GitHub Actions to automatically deploy and execute the tests whenever code is pushed to the repository. This allows the repository owner to quickly identify and address any potential issues or breaking changes before they impact the production environment. 
