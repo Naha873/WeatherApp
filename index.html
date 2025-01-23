@@ -21,14 +21,13 @@
         </div>
     </div>
     <div class="container">
-        <div class="header">
-        </div>
+        <div class="header"></div>
         <div class="current-weather">
             <div class="city-info">
                 <span id="city-name">London</span>
             </div>
             <div class="time-info">
-                <span id="current-time">9:45</span>
+                <span id="current-time">Thursday 25th December</span>
             </div>
             <div class="temperature">
                 <span id="current-temperature">30°C</span>
@@ -38,33 +37,75 @@
             </div>
         </div>
     </div>
- <script src="index.js"></script>
- <script>
-    const searchBar = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
-    
-    searchButton.addEventListener('click', async () => {
-        const location = searchBar.value;
-        try {
-            // Get location coordinates
-            const { latitude, longitude } = await getLocation(location);
-            // Get weather data
-            const weatherData = await getWeatherData(latitude, longitude);
-            // Update UI
-            document.getElementById('city-name').textContent = location;
-            document.getElementById('current-temperature').textContent = `${weatherData.temperature}°C`;
-            // Update weather description based on weather code
-            const weatherDesc = getWeatherDescription(weatherData.weatherCode);
-            document.getElementById('weather-description').textContent = weatherDesc;
-        } catch (error) {
-            console.error(error);
-            alert('Error fetching weather data!');
+    <script src="index.js"></script>
+    <script>
+        const searchBar = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const unitToggle = document.getElementById('unit-toggle');
+        const temperatureUnit = document.getElementById('temperature-unit');
+        const currentTemperature = document.getElementById('current-temperature');
+
+        // Function 1: Update Current Date
+        function updateCurrentDate() {
+            const currentDate = new Date();
+            const weekday = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
+            const day = currentDate.getDate();
+            const month = currentDate.toLocaleDateString('en-US', { month: 'long' });
+            const year = currentDate.getFullYear();
+
+            const ordinalDay = day + getOrdinalNum(day);
+
+            document.getElementById('current-time').textContent = `${weekday} ${ordinalDay} ${month} ${year}`;
         }
-    });
- </script>
+
+        function getOrdinalNum(n) {
+            return ['th', 'st', 'nd', 'rd'][(n % 100 > 10 && n % 100 < 14) ? 0 : (n % 10 < 4) ? n % 10 : 0];
+        }
+
+        // Function 2: Temperature Unit Toggle
+        let currentTemp = 30; // Initial temperature
+
+        unitToggle.addEventListener('change', () => {
+            if (unitToggle.checked) {
+                const fahrenheitTemp = celsiusToFahrenheit(currentTemp);
+                currentTemperature.textContent = `${fahrenheitTemp.toFixed(1)}°F`;
+                temperatureUnit.textContent = 'Fahrenheit';
+            } else {
+                currentTemperature.textContent = `${currentTemp}°C`;
+                temperatureUnit.textContent = 'Celsius';
+            }
+        });
+
+        // Call update date when page loads
+        updateCurrentDate();
+
+        // Search button event listener
+        searchButton.addEventListener('click', async () => {
+            const location = searchBar.value;
+            try {
+                const { latitude, longitude } = await getLocation(location);
+                const weatherData = await getWeatherData(latitude, longitude);
+                
+                currentTemp = weatherData.temperature;
+                
+                document.getElementById('city-name').textContent = location;
+                
+                if (unitToggle.checked) {
+                    const fahrenheitTemp = celsiusToFahrenheit(currentTemp);
+                    document.getElementById('current-temperature').textContent = `${fahrenheitTemp.toFixed(1)}°F`;
+                    temperatureUnit.textContent = 'Fahrenheit';
+                } else {
+                    document.getElementById('current-temperature').textContent = `${currentTemp}°C`;
+                    temperatureUnit.textContent = 'Celsius';
+                }
+                
+                const weatherDesc = getWeatherDescription(weatherData.weatherCode);
+                document.getElementById('weather-description').textContent = weatherDesc;
+            } catch (error) {
+                console.error(error);
+                alert('Error fetching weather data!');
+            }
+        });
+    </script>
 </body>
 </html>
-
-
-    
-
