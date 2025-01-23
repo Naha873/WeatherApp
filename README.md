@@ -266,3 +266,28 @@ I used Test-Driven Development (TDD) to create Jest unit tests for the logic fun
 ## Continuous Integration and Development 
 
 To ensure Continuous Integration and Continuous Delivery (CI/CD), I have implemented GitHub Actions to automatically deploy and execute the tests whenever code is pushed to the repository. This allows the repository owner to quickly identify and address any potential issues or breaking changes before they impact the production environment. 
+
+## Performance and Accessibility testing
+
+To evaluate the performance of the weather app, I utilised a free Chrome-based service called Lighthouse to conduct tests across performance, accessibility, best practices, and SEO (Search Engine Optimisation). As demonstrated by the results, with scores of 100, 90, 100, and 90 respectively, the app exhibits strong performance across all key metrics. This implies that the app is highly optimised for user experience, accessible to a wide range of users, adheres to industry best practices, and is well-positioned for search engine visibility.
+
+![Screenshot 2025-01-23 at 11 51 43](https://github.com/user-attachments/assets/c01680ef-234c-4616-a9e4-e6702230cda0)
+
+Both accessibility and SEO highlighted a single area for improvement, as outlined below. While I attempted to address these issues, there were time constraints and technical challenges and so we decided to prioritise these for resolution in a future sprint. It's important to remember that this is a Minimum Viable Product (MVP), essentially a prototype, and therefore should focus on core functionality and gather user feedback before implementing extensive refinements.
+
+![Image 23-01-2025 at 20 37](https://github.com/user-attachments/assets/dd3f12f2-1c96-4cf1-9681-4a746d613455)
+
+![Image 23-01-2025 at 20 38](https://github.com/user-attachments/assets/7c6ca398-ff05-445b-82c7-d622d6eb5d22)
+
+## Manual testing
+
+Manual testing was conducted to verify specific functionalities. Inputting gibberish into the search bar successfully triggered the expected error message, confirming the functionality of both the search bar and its associated button. Furthermore, manual conversion calculations were performed using a calculator, and the results were successfully matched, demonstrating the successful implementation of DOM reactive elements.
+
+![Screenshot 2025-01-23 at 20 45 45](https://github.com/user-attachments/assets/05b8179e-5031-4e1c-85c9-064cb8afff3c)
+
+## Evaluation
+The weather app successfully meets all acceptance criteria outlined in the user story cards, effectively addressing user needs with clear presentation of essential information. Interactive features, such as the intuitive search bar and the convenient Celsius/Fahrenheit toggle, enhance user experience.
+
+While successful, the prototype exhibits some limitations. Firstly, the current API displays a 15-minute delay in temperature updates, necessitating budget discussions for a more accurate and real-time data source. Secondly, the current layout is not responsive, becoming unusable on narrower screens.
+These limitations, along with user feedback on the MVP, will inform the next iteration, ensuring they are fully addressed in the final version.
+
