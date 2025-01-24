@@ -47,7 +47,7 @@ If they are not installed, follow the steps on [npm Docs](https://docs.npmjs.com
 ### 2. Afterwards, clone this repo:
 
 ```sh
-git clone https://github.com/EDGENortheastern/dan-m-dec22.git
+git clone https://github.com/Naha873/WeatherApp.git
 ```
 Now, you should have everything that you need to proceed! Navigate into the folder you just cloned to find our code.
 
