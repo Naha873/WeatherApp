@@ -16,20 +16,6 @@ Github Username: @Naha873
 
 This weather app displays current temperature, date, and weather for a searched location, with Celsius/Fahrenheit units. 
 
-## Project introduction and proposal
-
-**Project Goals**
-
-This project aims to develop an internal weather application for company employees. It will provide accurate and timely weather information for various locations, reducing third party dependencies. It will also foster a culture of innovation within the team to evaluate current processes and assess areas improvements. 
-
-**API Selection and Development Approach**
-
-The app will initially use the open-meteo.com’s weather and geocoding API due to its free access. However, the project team should conduct a thorough evaluation of all API options in the long term, considering factors such as cost, data accuracy, feature set, and API limits to determine the most suitable solution for the project budget and requirements.
-
-**High level overview of project**
-
-![Image 23-01-2025 at 17 39](https://github.com/user-attachments/assets/56837d46-4c8c-4b10-861b-04774f085f2f)
-
 # User Documentation
 
 This project requires npm to execute the files, so ensure that it is installed.
@@ -86,6 +72,20 @@ npm test
     - Repo link: https://naha873.github.io/WeatherApp/
     - Weather data API link: https://open-meteo.com/en/docs#current=temperature_2m,weather_code&hourly=
     - Location data API link: https://open-meteo.com/en/docs/geocoding-api#name=london&count=100
+
+## Project introduction and proposal
+
+**Project Goals**
+
+This project aims to develop an internal weather application for company employees. It will provide accurate and timely weather information for various locations, reducing third party dependencies. It will also foster a culture of innovation within the team to evaluate current processes and assess areas improvements. 
+
+**API Selection and Development Approach**
+
+The app will initially use the open-meteo.com’s weather and geocoding API due to its free access. However, the project team should conduct a thorough evaluation of all API options in the long term, considering factors such as cost, data accuracy, feature set, and API limits to determine the most suitable solution for the project budget and requirements.
+
+**High level overview of project**
+
+![Image 23-01-2025 at 17 39](https://github.com/user-attachments/assets/56837d46-4c8c-4b10-861b-04774f085f2f)
 
 ## Project requirement
 
