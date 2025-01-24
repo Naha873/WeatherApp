@@ -192,7 +192,10 @@ I wanted an iterative approach to adding features to the app, so I used an agile
 
 ![Image 20-01-2025 at 11 55](https://github.com/user-attachments/assets/aa1f1554-cbc4-41f0-80c5-5027e1465ede)
 
-To effectively manage the project, I used a Kanban methodology using GitHub Projects. This visual workflow, with columns for 'Backlog,' 'Ready,' 'In Progress,' 'In Review,' and 'Done,' provided a dynamic overview of the project's status. By moving tasks across these columns, I maintained a constant awareness of the project's workload, tracked progress, and ensured timely completion. I also linked these tasks to corresponding Git branches so that there was seamless integration and clear traceability between project management and the code development. 
+To effectively manage the project, I used a Kanban methodology using GitHub Projects. This visual workflow, with columns for 'Backlog,' 'Ready,' 'In Progress,' 'In Review,' and 'Done,' provided a dynamic overview of the project's status. By moving tasks across these columns, I maintained a constant awareness of the project's workload, tracked progress, and ensured timely completion. I also linked these tasks to corresponding Git branches so that there was seamless integration and clear traceability between project management and the code development.
+
+**Example issue with branch linked**
+![Image 24-01-2025 at 11 58](https://github.com/user-attachments/assets/2129e200-01e8-4e24-96f4-11ef4e4befd4)
 
 ### **Project Labels**
 
